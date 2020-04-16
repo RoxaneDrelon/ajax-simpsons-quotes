@@ -4,7 +4,7 @@ function fetchQuoteJSON() {
   axios
     .get(url)
     .then(function (response) {
-      return response.data; // response.data instead of response.json() with fetch
+      return response.data[0]; // response.data instead of response.json() with fetch
     })
     .then(function (quotes) {
       console.log("data decoded from JSON:", quotes);
